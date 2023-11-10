@@ -1,0 +1,87 @@
+---
+title: "R2Python"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval=F)
+library(reticulate)
+use_python("/usr/local/bin/python3.11") # for python code chunks
+```
+
+
+After spending several years analysing data in R, I recently switched to Python. This cheatsheet includes code examples of how I translated R code into Python code. This file will be updated on a regular basis. <span style="background-color: #DFF0D8">Python code</span> is highlighted in green. 
+
+- libraries
+- loops and indexing
+- if statements
+- dataframes
+- reading in data
+- pivot tables
+
+
+### Loading packages
+The Python syntax for `library(name)` is simply `import name`. In Python, it is very common to use an alias `import name as alias` so a shorter name can be used when referring to the package. <i>Pandas</i> and <i>Numpy</i> are the most popular packages for data analysis. 
+
+```{r library}
+library(tidyverse)
+```
+
+```{python import, class.source="bg-success"}
+import pandas as pd
+import numpy as np
+```
+
+### Read in files from directory
+
+To read in data files you might want to create a list of all files in a specific directory that match a certain pattern. These commands list all csv files from the specified directory which which include a zero in the filename (this needs to be adjusted to your file naming).
+
+```{r list filenames}
+filenames <- list.files("/Users/verenasarrazin/Documents/Oxford/Post-doc/TMS_trial/FERT/FERT_full_data", pattern="0*.csv", full.names=TRUE)
+```
+
+```{python glob, class.source="bg-success"}
+filenames = sorted(glob.glob('/Users/verenasarrazin/Documents/Oxford/Post-doc/TMS_trial/FERT/FERT_full_data/0*.csv'))
+```
+
+
+The following code loops through the list of datafiles, reads in each file and appends it to the previous files. The first line preallocates an empty dataframe. 
+
+```{r read in data}
+# Create empty dataframe
+Data <- data.frame("ID"=NA, "Session"=NA,"Block"=NA, "Trial"=NA, "Emotion"=NA, "Intensity"=NA, "Choice"=NA, "RT"=NA, "Protocol"=NA)[numeric(0),]
+
+# Loop through file names
+for (file in 1:length(filenames)){
+  
+  data <- read.csv(filenames[file]) # read in data
+  data <- filter(data, !(is.na(loop_trials.thisN))) # remove trials not needed for task analysis
+  
+  # add ID and session from file name
+  data$ID <- substr(sub(".*FERT_full_data/", "", filenames[file]),1,3) 
+  data$session <- substr(sub(".*FERT_full_data/..._", "", filenames[file]),1,1) 
+  
+  # extract relevant variables
+  Data1 <- select(data, ID, session, im_block, im_stimNo, im_emotion, im_percentEmo, key_respTrial.keys, key_respTrial.rt, trialOrderFile)
+  colnames(Data1) <- c("ID", "Session","Block", "Trial", "Emotion", "Intensity", "Choice", "RT", "Protocol")
+  Data <- rbind(Data, Data1) # concatenate new dataset with previous datasets
+  rm(data,Data1)
+}
+```
+
+The Python syntax for pandas dataframes is slightly different. Variables can be assessed using `df['ColumnName']` instead of `df$ColumnName`. 
+
+```{python read in data python, class.source="bg-success"}
+# Create empty pandas dataframe
+data = pd.DataFrame(columns=['ID', 'Session', 'im_block', 'im_stimNo', 'im_emotion', 'im_percentEmo', 'key_respTrial.keys',
+                             'key_respTrial.rt', 'trialOrderFile'])
+# Loop through file names
+for file in filenames:
+    df = pd.read_csv(file) # read in file
+    df = df.dropna(subset=['loop_trials.thisN'])  # # remove trials not needed for task analysis
+    df['ID'] = file[-9:-6] # add ID from filename
+    df['Session'] = file[-5] # add Session from filename
+    df = df[['ID', 'Session','im_block', 'im_stimNo', 'im_emotion', 'im_percentEmo', 'key_respTrial.keys', 'key_respTrial.rt',
+             'trialOrderFile']] # select relevant variables
+    data = pd.concat([data, df]) # concatenate new dataset with previous datasets
+```
