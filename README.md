@@ -1,4 +1,4 @@
-# Data-Science
+# Analysis & Coding
 
 Here is a collection of coding projects I have been working on in the past few years. Several of them have been part of my PhD or work as post-doc.
 
@@ -9,7 +9,7 @@ Here is a collection of coding projects I have been working on in the past few y
 - creating figures in ggplot
 
 ## Python
-- <a href="https://verenasarrazin.github.io/Data-Science/R2Python.html" title="R2Python">R2Python</a>
+- <a href="https://verenasarrazin.github.io/Analysis-and-coding/R2Python.html" title="R2Python">R2Python</a>
 
 ## SQL
 - Journal Ranking Database
