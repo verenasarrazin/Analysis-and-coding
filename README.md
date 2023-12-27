@@ -4,7 +4,7 @@ Below, I am sharing scripts I have created for research projects during my DPhil
 
 ## Research projects
 
-#### Targeting negative cognitive biases using brain stimulation (R)
+#### Targeting negative cognitive biases using brain stimulation (R & STAN)
 - Fitting a reinforcement learning model using grid approximation
 - Fitting a reinforcement learning model using STAN
 - Removing outliers, ANOVAs, t-tests, correlations
