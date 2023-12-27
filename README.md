@@ -1,15 +1,18 @@
 # Analysis & Coding
 
-Here is a collection of coding projects I have been working on in the past few years. Several of them have been part of my PhD or work as post-doc.
+## Research projects
 
-## R
-- Fit a reinforcement learning model using grid approximation
-- Fit a reinforcement learning model using STAN
-- remove outliers
-- creating figures in ggplot
+### Trageting negative cognitive baises using brain stimulation (R)
+- Fitting a reinforcement learning model using grid approximation
+- Fitting a reinforcement learning model using STAN
+- Removing outliers, ANOVAs, t-tests, correlations
+- Creating figures in ggplot
 
-## Python
-- <a href="https://verenasarrazin.github.io/Analysis-and-coding/R2Python.html" title="R2Python">R2Python</a>
+### Cognitive phenotyping
+- PCA
+- Regression analysis
 
-## SQL
-- Journal Ranking Database
+## Data science projects
+
+- Journal Ranking Database (SQL)
+- <a href="https://verenasarrazin.github.io/Analysis-and-coding/R2Python.html" title="R2Python (R & Python)">R2Python (R & Python)</a>
