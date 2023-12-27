@@ -1,16 +1,19 @@
 # Analysis & Coding
 
+Below, I am sharing scripts I have created for research projects during my DPhil and post-doc, as well as scripts for data science projects I have been working on to extend my coding skills.
+
 ## Research projects
 
-### Trageting negative cognitive baises using brain stimulation (R)
+#### Trageting negative cognitive biases using brain stimulation (R)
 - Fitting a reinforcement learning model using grid approximation
 - Fitting a reinforcement learning model using STAN
 - Removing outliers, ANOVAs, t-tests, correlations
 - Creating figures in ggplot
 
-### Cognitive phenotyping
+#### Cognitive phenotyping
 - PCA
 - Regression analysis
+
 
 ## Data science projects
 
