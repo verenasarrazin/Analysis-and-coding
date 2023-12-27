@@ -6,7 +6,7 @@ Below, I am sharing scripts I have created for research projects during my DPhil
 
 #### (Targeting negative cognitive biases using brain stimulation (R & STAN))
 
-####<a href="https://github.com/verenasarrazin/Analysis-and-coding/tree/main/Targeting%20negative%20cognitive%20biases%20using%20brain%20stimulation%20(R%20%26%20STAN)" title="Targeting negative cognitive biases using brain stimulation (R & STAN)">Targeting negative cognitive biases using brain stimulation (R & STAN)</a>
+#### <a href="https://github.com/verenasarrazin/Analysis-and-coding/tree/main/Targeting%20negative%20cognitive%20biases%20using%20brain%20stimulation%20(R%20%26%20STAN)" title="Targeting negative cognitive biases using brain stimulation (R & STAN)">Targeting negative cognitive biases using brain stimulation (R & STAN)</a>
 
 - Fitting a reinforcement learning model using grid approximation
 - Fitting a reinforcement learning model using STAN
