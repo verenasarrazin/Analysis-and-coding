@@ -21,7 +21,7 @@ In this study, participants performed a reward and punishment learning task. The
 
 The parameter estimates derived from the computational models were analysed in repeated-measures ANOVAs. The main analysis of interest was the contrast between real tDCS and sham tDCS (placebo).
 
-- [Analsysis script](https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Targeting%20negative%20cognitive%20biases%20using%20brain%20stimulation%20(R%20%26%20STAN)/Effect_of_tDCS_constant_model.R): Removing outliers, ANOVAs, t-tests, figures
+- [Analysis script](https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Targeting%20negative%20cognitive%20biases%20using%20brain%20stimulation%20(R%20%26%20STAN)/Effect_of_tDCS_constant_model.R): Removing outliers, ANOVAs, t-tests, figures
 
 
 ## Publication
