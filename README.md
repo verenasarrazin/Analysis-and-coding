@@ -19,5 +19,5 @@ Below, I am sharing scripts I have created for research projects during my DPhil
 
 ## Data science projects
 
-- <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Project_journal_ranking.html" title="Journal Ranking Database (SQL)">Journal Ranking Database (SQL)</a>
+- <a href="https://verenasarrazin.github.io/Analysis-and-coding/Project_journal_ranking.html" title="Journal Ranking Database (SQL)">Journal Ranking Database (SQL)</a>
 - <a href="https://verenasarrazin.github.io/Analysis-and-coding/R2Python.html" title="R2Python (R & Python)">R2Python (R & Python)</a>
