@@ -9,8 +9,11 @@ depressive symptoms. Normalising these deficits in reward and punishemnt learnin
 
 In this study, participants performed a reward and punishment learning task. The analysis of this tasks requires fitting refinforcementlearning models to participants' trial-by-trial choices. I used two approaches:
 
-- Fitting a reinforcement learning model using grid approximation
-- Fitting a reinforcement learning model using STAN
+#### Fitting a reinforcement learning model using grid approximation:
+- [function that performs model fitting](https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Targeting%20negative%20cognitive%20biases%20using%20brain%20stimulation%20(R%20%26%20STAN)/Parameter_estimation_model1_blockwise.R)
+- [wrapper script (R)](https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Targeting%20negative%20cognitive%20biases%20using%20brain%20stimulation%20(R%20%26%20STAN)/fit_model1_block_wise.R)
+
+#### Fitting a reinforcement learning model using STAN
 
 ## Statistical Analysis
 
