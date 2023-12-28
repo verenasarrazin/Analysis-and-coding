@@ -7,39 +7,299 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="1671.6">
   <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #0000ff; -webkit-text-stroke: #000000}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #8000ff; -webkit-text-stroke: #000000}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #558e28; -webkit-text-stroke: #000000; min-height: 12.0px}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 12.0px}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #400080; -webkit-text-stroke: #000000}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #118002; -webkit-text-stroke: #000000}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #5600ff; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #0000ff; -webkit-text-stroke: #000000}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #165f25; -webkit-text-stroke: #000000}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #165f25; -webkit-text-stroke: #000000; min-height: 12.0px}
     span.s1 {font-kerning: none}
     span.s2 {font-kerning: none; color: #000000}
     span.s3 {font-kerning: none; color: #0000ff}
+    span.s4 {font-kerning: none; color: #5600ff}
+    span.Apple-tab-span {white-space:pre}
   </style>
 </head>
 <body>
 <p class="p1"><span class="s1"><br>
 </span></p>
-<p class="p1"><span class="s1">-- ------------------------- JOURNAL RANKING DATABASE -----------------------------------<span class="Apple-converted-space"> </span></span></p>
-<p class="p2"><span class="s1">CREATE DATABASE IF NOT EXISTS</span><span class="s2"> journal_ranking;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s3">USE </span><span class="s1">journal_ranking;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><br>
+<p class="p2"><span class="s1"><b>-- ------------------------- JOURNAL RANKING DATABASE -----------------------------------------------------------------------------------------------------</b></span></p>
+<p class="p2"><span class="s1"><br>
 </span></p>
-<p class="p3"><span class="s1">-- These tables were read in from csv files<span class="Apple-converted-space"> </span></span></p>
-<p class="p2"><span class="s1">SELECT * FROM</span><span class="s2"> main;<span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"></span><br></p>
-<p class="p3"><span class="s1">-- includes Journal Title, Country, Subject Area; most of the other tables refer to the ID variable as foreign key<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s3">SELECT * FROM</span><span class="s1"> docs; -- includes how many documents journals publish and how often they are cited </span><span class="s3">SELECT * FROM </span><span class="s1">scores;<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p6"><span class="s1">-- includes quality scores such as SJR index and Cite Score<span class="Apple-converted-space"> </span></span></p>
-<p class="p2"><span class="s1">SELECT * FROM</span><span class="s2"> publisher;<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p7"><span class="s1">-- includes publisher and Open Access</span><span class="s2"><span class="Apple-converted-space"> </span></span></p>
-<p class="p2"><span class="s1">SELECT * FROM country;<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">-- includes the continent for each country<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1">-- This table was created manually to save the date of new entries CREATE TABLE date_added( ID INT, DateAdded DATE); -- Add primary and foreign keys --------------------------------------------------------------------------------------------------------------------------------------- -- primary key for main table ALTER TABLE main ADD PRIMARY KEY (ID); -- primary key for country table ALTER TABLE country ADD PRIMARY KEY (Country); -- foreign key to link main to country ALTER TABLE main ADD FOREIGN KEY (Country) REFERENCES country (Country); -- add primary and foreign key to docs ALTER TABLE docs ADD PRIMARY KEY (ID); ALTER TABLE docs ADD FOREIGN KEY (ID) REFERENCES main (ID); -- add primary and foreign key to scores ALTER TABLE scores ADD PRIMARY KEY (ID); ALTER TABLE scores ADD FOREIGN KEY (ID) REFERENCES main (ID); -- add primary and foreign key to publisher ALTER TABLE publisher ADD PRIMARY KEY (ID); ALTER TABLE publisher ADD FOREIGN KEY (ID) REFERENCES main (ID); -- add foreign key for date_added ALTER TABLE date_added ADD FOREIGN KEY (ID) REFERENCES main (ID); -- Queries (with subqueries) ---------------------------------------------------------------------------------------------------------------------------------------- -- Count how many journals exist for each Subject Area, and order by number SELECT SubjectArea, COUNT(Title) FROM main GROUP BY SubjectArea ORDER BY COUNT(Title) DESC; -- Display for each subject area the journal with the highest SJR index SELECT ID, Title, SubjectArea FROM main WHERE ID IN (SELECT min(t1.ID) FROM main t1 INNER JOIN scores t2 ON t1.ID = t2.ID GROUP BY SubjectArea); -- Count how many journals per subject area have been cited more than 100,000 times in the past 3 years SELECT Count(t1.ID) AS More_than_100000_cites, SubjectArea FROM main t1 INNER JOIN docs t2 ON t1.ID = t2.ID AND TotalCites3y &gt; 100000 GROUP BY SUBJECTArea; -- FUCNTIONS -------------------------------------------------------------------------------------------------------------------------------------------------- -- 1 -- -- The function more_cites_than_average(TotalCites3y INT) tests whether a journal has more cites than the average across all journals. -- The function first calls the function average_cites() which calculates the average cites across all journals. delimiter $$ CREATE FUNCTION average_cites() RETURNS FLOAT DETERMINISTIC BEGIN DECLARE cites_average FLOAT; SELECT AVG(TotalCites3y) INTO cites_average FROM docs; RETURN (cites_average); END $$ DELIMITER ; SELECT average_cites(); delimiter $$ CREATE FUNCTION more_cites_than_average(TotalCites3y INT) RETURNS VARCHAR(20) DETERMINISTIC BEGIN DECLARE more_than_avg VARCHAR(20); IF TotalCites3y &gt; average_cites() THEN SET more_than_avg = 'YES'; ELSEIF (TotalCites3y &lt; average_cites()) THEN SET more_than_avg = 'no'; ELSEIF (TotalCites3y = average_cites()) THEN SET more_than_avg = 'Average'; END IF; RETURN (more_than_avg); END $$ delimiter ; -- apply function to all journals SELECT ID, more_cites_than_average(TotalCites3y) AS Above_average_cites FROM docs; -- 2 -- -- The function correlation() returns the Pearson correlation between SJR_index and CiteScore. -- It calls the function covariance() which calculates the covariance between these variables. delimiter \\ CREATE FUNCTION covariance() RETURNS FLOAT DETERMINISTIC BEGIN DECLARE cov FLOAT; SELECT( SUM( SJR_index * CIteScore ) - SUM( SJR_index ) * SUM( CIteScore ) / COUNT( SJR_index ) ) / COUNT( SJR_index ) INTO cov FROM scores; RETURN (cov); END \\ delimiter ; delimiter \\ CREATE FUNCTION correlation() RETURNS FLOAT DETERMINISTIC BEGIN DECLARE corr FLOAT; SELECT COVARIANCE() / ( STDDEV( SJR_index ) * STDDEV( CiteScore ) ) INTO corr FROM scores; RETURN (corr); END \\ delimiter ; -- Call the correlation() function select correlation() AS Correlation_SJR_CiteScore; -- View ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- -- Create view that combines main, publisher and scores CREATE VIEW journal_info AS SELECT t1.ID, Title, BestQuartile, Country, SubjectArea, Publisher, OA AS OpenAcces, SJR_index FROM main t1 INNER JOIN publisher t2 ON t1.ID = t2.ID INNER JOIN scores t3 ON t2.ID = t3.ID; SELECT * FROM journal_info; -- Use this view for analalysis: Display number of OpenAccess and non-OpenAccess journals, and the corresponing average SJR-index SELECT OpenAcces, COUNT(Title) AS Number_of_journals, AVG(SJR_index) AS Average_SJR_index FROM journal_info GROUP BY OpenAcces; -- Stored procedure ---------------------------------------------------------------------------------------------------------------------------------------------------------- -- inserts a new entry into main delimiter $$ CREATE PROCEDURE insert_main( IN ID INT, IN Title VARCHAR(80), IN BestQuartile VARCHAR(2), IN Country VARCHAR(80), IN SubjectArea VARCHAR(80)) BEGIN INSERT INTO main (ID, Title, BestQuartile, Country, SubjectArea) VALUES (ID, Title, BestQuartile, Country, SubjectArea); END $$ delimiter ; -- Test this procedure: CALL insert_main(18016, 'Verenas journal', 'Q4', 'Germany', 'Medicine'); SELECT * FROM main WHERE ID = 18016; -- Trigger ------------------------------------------------------------------------------------------------------------------------------------------------------------- -- This trigger adds the date (and ID) to the table date_added for every new row inserted into main. delimiter $$ CREATE TRIGGER add_date AFTER INSERT ON main FOR EACH ROW BEGIN INSERT INTO date_added (ID, DateAdded) VALUES (NEW.ID, DATE(now())); END $$ DELIMITER ; -- Check if inserting a row into main added date to date_added: SELECT * FROM date_added;<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">CREATE DATABASE IF NOT EXISTS</span><span class="s2"> journal_ranking;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">USE </span><span class="s1">journal_ranking;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- These tables were read in from csv files<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s3">SELECT * FROM</span><span class="s2"> main; </span><span class="s1">-- includes Journal Title, Country, Subject Area; most of the other tables refer to the ID variable as foreign key<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s3">SELECT * FROM</span><span class="s2"> docs; </span><span class="s1">-- includes how many documents journals publish and how often they are cited<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s3">SELECT * FROM </span><span class="s2">scores; </span><span class="s1">-- includes quality scores such as SJR index and Cite Score<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s3">SELECT * FROM</span><span class="s2"> publisher; </span><span class="s1">-- includes publisher and Open Access<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s3">SELECT * FROM </span><span class="s2">country; </span><span class="s1">-- includes the continent for each country<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- This table was created manually to save the date of new entries<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">CREATE TABLE</span><span class="s1"> date_added(</span></p>
+<p class="p2"><span class="s1">ID</span><span class="s3"> INT</span><span class="s1">,<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">DateAdded </span><span class="s3">DATE</span><span class="s1">);<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><b>-- Add primary and foreign keys -------------------------------------------------------------------------------------------------------------------------------------<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- primary key for main table<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">ALTER TABLE </span><span class="s2">main<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">ADD PRIMARY KEY</span><span class="s2"> (ID);<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- primary key for country table<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">ALTER TABLE</span><span class="s2"> country<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">ADD PRIMARY KEY</span><span class="s2"> (Country);<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1">-- foreign key to link main to country<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">ALTER TABLE</span><span class="s2"> main<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">ADD FOREIGN KEY</span><span class="s2"> (Country)<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">REFERENCES</span><span class="s1"> country (Country);<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- add primary and foreign key to docs<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1">ALTER TABLE</span><span class="s2"> docs<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">ADD PRIMARY KEY</span><span class="s2"> (ID);<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1">ALTER TABLE</span><span class="s2"> docs<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">ADD FOREIGN KEY</span><span class="s2"> (ID)<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">REFERENCES</span><span class="s1"> main (ID);<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- add primary and foreign key to scores<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">ALTER TABLE</span><span class="s2"> scores<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">ADD PRIMARY KEY</span><span class="s2"> (ID);<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1">ALTER TABLE</span><span class="s2"> scores<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">ADD FOREIGN KEY</span><span class="s2"> (ID)<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">REFERENCES</span><span class="s1"> main (ID);<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- add primary and foreign key to publisher<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">ALTER TABLE </span><span class="s2">publisher<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">ADD PRIMARY KEY</span><span class="s2"> (ID);<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p3"><span class="s1">ALTER TABLE </span><span class="s2">publisher<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">ADD FOREIGN KEY</span><span class="s2"> (ID)<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">REFERENCES</span><span class="s1"> main (ID);<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- add foreign key for date_added<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">ALTER TABLE</span><span class="s1"> date_added<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">ADD FOREIGN KEY</span><span class="s2"> (ID)<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">REFERENCES main</span><span class="s2"> (ID);<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><b>-- Queries (with subqueries) ----------------------------------------------------------------------------------------------------------------------------------------<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- Count how many journals exist for each Subject Area, and order by number</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">SELECT </span><span class="s1">SubjectArea, </span><span class="s4">COUNT</span><span class="s1">(Title) </span><span class="s3">FROM</span><span class="s1"> main<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">GROUP BY</span><span class="s1"> SubjectArea<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">ORDER BY</span><span class="s2"> </span><span class="s4">COUNT</span><span class="s2">(Title) </span><span class="s1">DESC</span><span class="s2">;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- Display for each subject area the journal with the highest SJR index<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s3">SELECT</span><span class="s1"> ID, Title, SubjectArea </span><span class="s3">FROM</span><span class="s1"> main<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">WHERE</span><span class="s1"> ID IN<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">(</span><span class="s3">SELECT</span><span class="s1"> </span><span class="s4">min</span><span class="s1">(t1.ID)<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">FROM</span><span class="s1"> main t1<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">INNER JOIN</span><span class="s1"> scores t2<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">ON</span><span class="s1"> t1.ID = t2.ID<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">GROUP BY</span><span class="s1"> SubjectArea);<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- Count how many journals per subject area have been cited more than 100,000 times in the past 3 years<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s3">SELECT</span><span class="s1"> </span><span class="s4">Count</span><span class="s1">(t1.ID) AS More_than_100000_cites, SubjectArea</span></p>
+<p class="p2"><span class="s3">FROM</span><span class="s1"> main t1<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">INNER JOIN</span><span class="s2"> docs t2<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">ON</span><span class="s1"> t1.ID = t2.ID AND TotalCites3y &gt; 100000<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">GROUP BY</span><span class="s1"> SubjectArea;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><b>-- FUNCTIONS ---------------------------------------------------------------------------------------------------------------------------------------------------------<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><b>-- 1 --<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- The function more_cites_than_average(TotalCites3y INT) tests whether a journal has more cites than the average across all journals.<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">-- The function first calls the function average_cites() which calculates the average cites across all journals.<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1">delimiter $$<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">CREATE FUNCTION </span><span class="s1">average_cites()<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">RETURNS </span><span class="s3">FLOAT<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">DETERMINISTIC<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">BEGIN<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span></span><span class="s3">DECLARE </span><span class="s1">cites_average FLOAT;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s3">SELECT</span><span class="s1"> </span><span class="s4">AVG</span><span class="s1">(TotalCites3y) INTO cites_average FROM docs;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>RETURN (cites_average);<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">END</span><span class="s1"> $$<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">DELIMITER ;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s3">SELECT</span><span class="s1"> average_cites();<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1">delimiter $$<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">CREATE FUNCTION</span><span class="s1"> more_cites_than_average(TotalCites3y INT)<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">RETURNS</span><span class="s3"> VARCHAR</span><span class="s1">(20)<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">DETERMINISTIC<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">BEGIN<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span></span><span class="s3">DECLARE</span><span class="s1"> more_than_avg VARCHAR(20);<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>IF TotalCites3y &gt; average_cites() THEN<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s3">SET</span><span class="s1"> more_than_avg = 'YES';<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>ELSEIF (TotalCites3y &lt; average_cites()) THEN<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s3">SET </span><span class="s1">more_than_avg = 'no';<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>ELSEIF (TotalCites3y = average_cites()) THEN<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s3">SET</span><span class="s1"> more_than_avg = 'Average';<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s3">END </span><span class="s1">IF;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span>RETURN (more_than_avg);<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">END</span><span class="s1"> $$<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">delimiter ;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- apply function to all journals<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">SELECT</span><span class="s1"> ID, more_cites_than_average(TotalCites3y)</span><span class="s3"> AS </span><span class="s1">Above_average_cites </span><span class="s3">FROM</span><span class="s1"> docs;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><b>-- 2 --<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- The function correlation() returns the Pearson correlation between SJR_index and CiteScore.<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1">-- It calls the function covariance() which calculates the covariance between these variables.<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1">delimiter \\<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">CREATE FUNCTION </span><span class="s2">covariance()<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">RETURNS </span><span class="s3">FLOAT</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">DETERMINISTIC<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">BEGIN<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">DECLARE</span><span class="s2"> cov</span><span class="s1"> FLOAT</span><span class="s2">;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">SELECT</span><span class="s1">( </span><span class="s4">SUM</span><span class="s1">( SJR_index * CIteScore ) - </span><span class="s4">SUM</span><span class="s1">( SJR_index ) * </span><span class="s4">SUM</span><span class="s1">( CIteScore ) / </span><span class="s4">COUNT</span><span class="s1">( SJR_index ) ) / </span><span class="s4">COUNT</span><span class="s1">( SJR_index )</span><span class="s3"> INTO </span><span class="s1">cov </span><span class="s3">FROM</span><span class="s1"> scores;</span></p>
+<p class="p2"><span class="s1">RETURN (cov);<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">END</span><span class="s1"> \\<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">delimiter ;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1">delimiter \\<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">CREATE FUNCTION</span><span class="s1"> correlation()<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">RETURNS </span><span class="s3">FLOAT<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">DETERMINISTIC<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">BEGIN<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">DECLARE</span><span class="s2"> corr </span><span class="s1">FLOAT</span><span class="s2">;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">SELECT </span><span class="s1">COVARIANCE() / ( STDDEV( SJR_index ) * STDDEV( CiteScore ) ) </span><span class="s3">INTO</span><span class="s1"> corr </span><span class="s3">FROM</span><span class="s1"> scores;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">RETURN (corr);<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">END</span><span class="s1"> \\<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">delimiter ;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- Call the correlation() function<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">SELECT </span><span class="s1">correlation()</span><span class="s3"> AS </span><span class="s1">Correlation_SJR_CiteScore;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><b>-- View ----------------------------------------------------------------------------------------------------------------------------------------------------------------------<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p4"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- Create view that combines main, publisher and scores<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s3">CREATE VIEW</span><span class="s1"> journal_info AS<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">SELECT</span><span class="s1"> t1.ID, Title, BestQuartile, Country, SubjectArea, Publisher, OA AS OpenAcces, SJR_index<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">FROM </span><span class="s1">main t1<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">INNER JOIN</span><span class="s1"> publisher t2<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">ON</span><span class="s1"> t1.ID = t2.ID<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">INNER JOIN</span><span class="s1"> scores t3<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">ON</span><span class="s1"> t2.ID = t3.ID;<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s3">SELECT * FROM</span><span class="s1"> journal_info;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- Use this view for analalysis: Display number of OpenAccess and non-OpenAccess journals, and the corresponing average SJR-index<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s3">SELECT</span><span class="s1"> OpenAcces, </span><span class="s4">COUNT</span><span class="s1">(Title)</span><span class="s3"> AS</span><span class="s1"> Number_of_journals, </span><span class="s4">AVG</span><span class="s1">(SJR_index) </span><span class="s3">AS</span><span class="s1"> Average_SJR_index</span><span class="s3"> FROM</span><span class="s1"> journal_info<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">GROUP BY</span><span class="s1"> OpenAcces;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><b>-- Stored procedure -------------------------------------------------------------------------------------------------------------------------------------------------------<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- inserts a new entry into main<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1">delimiter $$<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">CREATE PROCEDURE </span><span class="s2">insert_main(</span></p>
+<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span></span><span class="s3">IN</span><span class="s1"> ID </span><span class="s3">INT</span><span class="s1">,<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s3">IN</span><span class="s1"> Title</span><span class="s3"> VARCHAR</span><span class="s1">(80),<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s3">IN</span><span class="s1"> BestQuartile </span><span class="s3">VARCHAR</span><span class="s1">(2),<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s3">IN</span><span class="s1"> Country </span><span class="s3">VARCHAR</span><span class="s1">(80),<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s3">IN</span><span class="s1"> SubjectArea </span><span class="s3">VARCHAR</span><span class="s1">(80))<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">BEGIN INSERT INTO</span><span class="s2"> main<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">(ID, Title, BestQuartile, Country, SubjectArea)<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">VALUES</span><span class="s1"> (ID, Title, BestQuartile, Country, SubjectArea);<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">END</span><span class="s1"> $$<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">delimiter ;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- Test this procedure:<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">CALL</span><span class="s1"> insert_main(18016, 'Verenas journal', 'Q4', 'Germany', 'Medicine');<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">SELECT * FROM</span><span class="s2"> main<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">WHERE</span><span class="s1"> ID = 18016;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><b>-- Trigger ------------------------------------------------------------------------------------------------------------------------------------------------------------------<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- This trigger adds the date (and ID) to the table date_added for every new row inserted into main.<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1">delimiter $$<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">CREATE TRIGGER</span><span class="s2"> add_date </span><span class="s1">AFTER INSERT ON </span><span class="s2">main<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">FOR EACH ROW<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">BEGIN<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">INSERT INTO </span><span class="s2">date_added</span></p>
+<p class="p2"><span class="s1">(ID, DateAdded)<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">VALUES<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">(NEW.ID, DATE(now()));</span></p>
+<p class="p2"><span class="s3">END</span><span class="s1"> $$<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">DELIMITER ;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p4"><span class="s1">-- Check if inserting a row into main added date to date_added:<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3">SELECT * FROM</span><span class="s1"> date_added;<span class="Apple-converted-space"> </span></span></p>
 </body>
 </html>
