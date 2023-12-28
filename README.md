@@ -7,8 +7,7 @@ Below, I am sharing scripts I have created for research projects during my DPhil
 
 - Fitting a reinforcement learning model using grid approximation
 - Fitting a reinforcement learning model using STAN
-- Removing outliers, ANOVAs, t-tests, correlations
-- Creating figures in ggplot
+- Removing outliers, ANOVAs, t-tests, creating figures in ggplot
 
 ![image](https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/c6d2dd02-eeb5-4fcc-a55d-a979362250f4)
 
