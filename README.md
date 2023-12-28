@@ -21,6 +21,7 @@ Below, I am sharing scripts I have created for research projects during my DPhil
 
 - <a href="https://verenasarrazin.github.io/Analysis-and-coding/Project_journal_ranking.html" title="Journal Ranking Database (SQL)">Journal Ranking Database (SQL)</a>
 
-![image](https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/22bf045f-2676-4039-a1bc-4abd646d8ebf)
+![image](https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/e4063b93-ccbb-415d-82b1-f2a262de01a0)
+
 
 - <a href="https://verenasarrazin.github.io/Analysis-and-coding/R2Python.html" title="R2Python (R & Python)">R2Python (R & Python)</a>
