@@ -20,4 +20,7 @@ Below, I am sharing scripts I have created for research projects during my DPhil
 ## Data science projects
 
 - <a href="https://verenasarrazin.github.io/Analysis-and-coding/Project_journal_ranking.html" title="Journal Ranking Database (SQL)">Journal Ranking Database (SQL)</a>
+
+![image](https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/22bf045f-2676-4039-a1bc-4abd646d8ebf)
+
 - <a href="https://verenasarrazin.github.io/Analysis-and-coding/R2Python.html" title="R2Python (R & Python)">R2Python (R & Python)</a>
