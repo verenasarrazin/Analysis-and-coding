@@ -1,4 +1,3 @@
-# Analysis & Coding
 
 Below, I am sharing scripts I have created for research projects during my DPhil and post-doc, as well as scripts for data science projects I have been working on to extend my coding skills.
 
