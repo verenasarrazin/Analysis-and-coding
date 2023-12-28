@@ -14,9 +14,9 @@ In this study, participants performed a reward and punishment learning task. The
 - [Wrapper script (R)](https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Targeting%20negative%20cognitive%20biases%20using%20brain%20stimulation%20(R%20%26%20STAN)/Parameter_estimation_model1_blockwise.R)
   
 #### Fitting a reinforcement learning model using STAN:
-- [Function that fits the model (STAN)](https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Targeting%20negative%20cognitive%20biases%20using%20brain%20stimulation%20(R%20%26%20STAN)/Parameter_estimation_model6_constant.R)
-- [Wrapper script (R)](https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Targeting%20negative%20cognitive%20biases%20using%20brain%20stimulation%20(R%20%26%20STAN)/fit_model6_constant.stan)
-
+- [Function that fits the model (STAN)](https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Targeting%20negative%20cognitive%20biases%20using%20brain%20stimulation%20(R%20%26%20STAN)/fit_model6_constant.stan)
+- [Wrapper script (R)](https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Targeting%20negative%20cognitive%20biases%20using%20brain%20stimulation%20(R%20%26%20STAN)/Parameter_estimation_model6_constant.R)
+- 
 ## Statistical Analysis
 
 The parameter estimates derived from the computational models were analysed in ANOVAs. The main analysis of interest was the contrast between real tDCS and sham tDCS (placebo).
