@@ -10,10 +10,16 @@ Below, I am sharing scripts I have created for research projects during my DPhil
 - Removing outliers, ANOVAs, t-tests, correlations
 - Creating figures in ggplot
 
+![image](https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/c6d2dd02-eeb5-4fcc-a55d-a979362250f4)
+
+
+
 #### Cognitive phenotyping (R & Python)
 - PCA
 - Extracting task measures (faces task)
 - Regression analysis
+
+![image](https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/b2f74327-686b-4e58-9f25-2a4c31dc23dd)
 
 
 ## Data science projects
