@@ -21,4 +21,4 @@ The parameter estimates derived from the computational models were analysed in A
 
 
 ## Publication
-The project has been published as [preprint on MedRxiv](https://www.medrxiv.org/content/10.1101/2023.04.24.23289064v1). I am very grateful for the opportunity to give a talk on this project at the Conference on COgntiive and Computational Neuroscience (CCN) 2023 in Oxford (watch the recording of Youtube here). I have also given poster presentations on this project. 
+The project has been published as [preprint on MedRxiv](https://www.medrxiv.org/content/10.1101/2023.04.24.23289064v1). I am very grateful for the opportunity to give a talk on this project at the Conference on Cogntiive and Computational Neuroscience (CCN) 2023 in Oxford ([watch the recording of Youtube here](https://www.youtube.com/live/nxTSMQFx-HM?feature=shared&t=7521)). I have also given poster presentations on this project. 
