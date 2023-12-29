@@ -33,4 +33,4 @@ Below, I am sharing scripts I have created for research projects during my DPhil
 ![image](https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/4b96db38-9e5f-4460-9162-beb1c534aaa8)
 
 
-## <a href="https://verenasarrazin.github.io/Analysis-and-coding/R2Python.html" title="5. R2Python Cheatsheet(R & Python)">5. R2Python Cheatsheet(R & Python)</a>
+## <a href="https://verenasarrazin.github.io/Analysis-and-coding/R2Python.html" title="5. R2Python Cheatsheet (R & Python)">5. R2Python Cheatsheet (R & Python)</a>
