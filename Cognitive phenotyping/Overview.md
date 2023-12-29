@@ -16,7 +16,7 @@ To extract different dimensions of depressive symptoms, I performed factor analy
 
 Participants were asked to perform five cognitive tasks. In the first task, participants need to indicate the emotion of faces which are briefly presented on the screen. Depression has been associated with an increased bias towards recognising facial expressions as negative. 
 
-- [Task analysis script (Python)]()
+- [Task analysis script (Python)](https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Cognitive%20phenotyping/FERT_preprocessing.py)
 
 
 ## Relating task measures to mood 
