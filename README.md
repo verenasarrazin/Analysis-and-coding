@@ -25,7 +25,7 @@ Below, I am sharing scripts I have created for research projects during my DPhil
 
 # Data Science Projects
 
-## <a href="https://verenasarrazin.github.io/Analysis-and-coding/Project_journal_ranking.html" title="3. Journal Ranking Database (SQL)">3. Journal Ranking Database (SQL)</a>
+## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Journal%20ranking%20database/Overview.md" title="3. Journal Ranking Database (SQL)">3. Journal Ranking Database (SQL)</a>
 
 ![image](https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/4b96db38-9e5f-4460-9162-beb1c534aaa8)
 
