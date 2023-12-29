@@ -23,7 +23,7 @@ Participants were asked to perform five cognitive tasks. In the first task, part
 
 I then used regression analysis to test whether different symptom dimensions can predict the measures derived from cognitive task performance.
 
-- <a href="https://verenasarrazin.github.io/Analysis-and-coding/FA_github.html" title="Regression analysis script (R)">Regression analysis script (R)</a>
+- <a href="https://verenasarrazin.github.io/Analysis-and-coding/Regression_github.html" title="Regression analysis script (R)">Regression analysis script (R)</a>
 
 
 ## Canonical Correlation Analysis (CCA)
