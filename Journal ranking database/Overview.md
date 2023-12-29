@@ -4,12 +4,12 @@ I recently completed a [Code First Girls](https://codefirstgirls.com/) course on
 
 - <a href="https://verenasarrazin.github.io/Analysis-and-coding/Project_journal_ranking.html" title="Journal Ranking Database (SQL)">Journal Ranking Database (SQL)</a>
 
-**The script includes**
-- *primary and foreign keys*
-- queries with subqueries (where, group by, inner join)
-- functions (calculate Pearson correlation between two variables)
-- a stored procedure (to insert new entries)
-- a trigger (to save the time and date of new entries)
+*The script includes*
+- **primary and foreign keys**
+- **queries with subqueries** (where, group by, inner join)
+- **functions** (calculate Pearson correlation between two variables)
+- a **stored procedure** (to insert new entries)
+- a **trigger** (to save the time and date of new entries)
 
 The structure of the database is summarised in the following EER diagram:
 
