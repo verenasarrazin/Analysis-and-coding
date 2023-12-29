@@ -28,7 +28,7 @@ I then used regression analysis to test whether different symptom dimensions can
 
 ## Canonical Correlation Analysis (CCA)
 
-CCA aims at maximising the correlation between linear combinations of two different modalities. In my project I will use CCA to identify different dimensions of task measures correlated to different symptom dimensions. 
+CCA aims at maximising the correlation between linear combinations of two different modalities. In this project, I will use CCA to identify different dimensions of task measures correlated to different symptom dimensions. 
 
 <img src="https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/34dea119-237e-450a-8117-2ea0b4732602" alt="drawing" width="500"/>
 
