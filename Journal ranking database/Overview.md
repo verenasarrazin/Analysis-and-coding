@@ -1,6 +1,6 @@
 # Journal Ranking Database
 
-I recently completed a [Code First Girls](https://codefirstgirls.com/) course on SQL to extend my programming knowledge. As project work for the course, I created a database using the [Journal Ranking Dataset](https://www.kaggle.com/datasets/xabirhasan/journal-ranking-dataset) from kaggle.com. The dataset contains information about hundreds of journals from different research areas, including number of published documents, number of citations, quality indices, country, etc. I wrote the following script to create the database:
+I have recently completed a [Code First Girls](https://codefirstgirls.com/) course on SQL to extend my programming knowledge. As project work for the course, I have created a database using the [Journal Ranking Dataset](https://www.kaggle.com/datasets/xabirhasan/journal-ranking-dataset) from kaggle.com. The dataset contains information about hundreds of journals from different research areas, including number of published documents, number of citations, quality indices, country, etc. I wrote the following script to create the database:
 
 - <a href="https://verenasarrazin.github.io/Analysis-and-coding/Project_journal_ranking.html" title="Journal Ranking Database (SQL)">Journal Ranking Database (SQL)</a>
 
@@ -21,4 +21,7 @@ I have created a figure in R to visualise on a world map how many documents have
 
 - [World map figure]()
 
-  
+
+<img src="https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/70cb5743-a839-4664-837c-eeba26dffa18" alt="drawing" width="600"/>
+
+
