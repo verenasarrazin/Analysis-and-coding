@@ -12,7 +12,9 @@ Below, I am sharing scripts I have created for research projects during my DPhil
 ![image](https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/c6d2dd02-eeb5-4fcc-a55d-a979362250f4)
 
 
-## 2. Cognitive Phenotyping (R & Python)
+## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Cognitive%20phenotyping/Overview.md" title="2. Cognitive Phenotyping (R & Python)">2. Cognitive Phenotyping (R & Python)</a>
+
+
 - Factor Analysis
 - Extracting task measures
 - Regression analysis
