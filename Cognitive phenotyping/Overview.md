@@ -33,5 +33,5 @@ CCA aim at maximising the correlation between linear combinations of two differe
 
 ![image](https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/34dea119-237e-450a-8117-2ea0b4732602)
 
-Fan M, Yang AC, Fuh J-L and Chou C-A (2018) Topological Pattern Recognition of Severe Alzheimer's Disease via Regularized Supervised Learning of EEG Complexity. Front. Neurosci. 12:685. doi: 10.3389/fnins.2018.00685
+*Figure adapted from: Fan M, Yang AC, Fuh J-L and Chou C-A (2018) Topological Pattern Recognition of Severe Alzheimer's Disease via Regularized Supervised Learning of EEG Complexity. Front. Neurosci. 12:685. doi: 10.3389/fnins.2018.00685*
 
