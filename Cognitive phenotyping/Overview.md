@@ -9,15 +9,26 @@ The goal of this project is to test whether different phenotypes of depression c
 
 To extract different dimensions of depressive symptoms, I performed factor analysis on mood questionnaire ratings.
 
-- [Factor analysis script]()
+- [Factor analysis script (R)]()
 
 
 ## Analysis of task performance
 
 Participants were asked to perform five cognitive tasks. In the first task, participants need to indicate the emotion of faces which are briefly presented on the screen. Depression has been associated with an increased bias towards recognising facial expressions as negative. 
 
-- [Task analysis script]()
+- [Task analysis script (Python)]()
 
-- 
+
+## Relating task measures to mood 
+
+I then used regression analysis to test whether different symptom dimensions can predict the measures derived from cognitive task performance.
+
+- [Regression analysis script (R)]()
+
+
+## Canonical Correlation Analysis (CCA)
+
+CCA aim at maximising the correlation between linear combinations of two different modalities. In my project I will use CCA to identify different dimensions of task measures which are correlated to different symptom dimensions. 
+
 
 
