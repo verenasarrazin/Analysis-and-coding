@@ -9,7 +9,7 @@ The goal of this project is to test whether different phenotypes of depression c
 
 To extract different dimensions of depressive symptoms, I performed factor analysis on mood questionnaire ratings.
 
-- [Factor analysis script (R)]()
+- <a href="https://verenasarrazin.github.io/Analysis-and-coding/blob/main/Cognitive%20phenotyping/FA_github.html" title="Factor analysis script (R)">Factor analysis script (R)</a>
 
 
 ## Analysis of task performance
