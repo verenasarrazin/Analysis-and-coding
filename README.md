@@ -34,4 +34,5 @@ Below, I am sharing scripts I have created for research projects during my DPhil
 
 <img width="920" alt="image" src="https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/d0a364e8-9b71-40ef-b133-e949e171cee8">
 
+<br>
 
