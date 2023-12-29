@@ -13,4 +13,4 @@ I recently completed a [Code First Girls](https://codefirstgirls.com/) course on
 
 The structure of the database is summarised in the following EER diagram:
 
-<img src="https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/9367bb38-b3b1-4a45-8839-15aebab71ddc" alt="drawing" width="500"/>
+<img src="https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/9367bb38-b3b1-4a45-8839-15aebab71ddc" alt="drawing" width="600"/>
