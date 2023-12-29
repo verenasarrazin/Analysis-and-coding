@@ -30,6 +30,7 @@ I then used regression analysis to test whether different symptom dimensions can
 
 CCA aim at maximising the correlation between linear combinations of two different modalities. In my project I will use CCA to identify different dimensions of task measures which are correlated to different symptom dimensions. 
 
+<img src="https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/34dea119-237e-450a-8117-2ea0b4732602" alt="drawing" width="200"/>
 
 ![image](https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/34dea119-237e-450a-8117-2ea0b4732602)
 
