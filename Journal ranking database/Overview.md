@@ -22,6 +22,6 @@ I have created a figure in R to visualise on a world map how many documents have
 - [World map figure script (R)]()
 
 
-<img src="https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/f3ca5c51-f58d-4778-9324-d5f1d3bf0fd6" alt="drawing" width="600"/>
+<img src="https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/f3ca5c51-f58d-4778-9324-d5f1d3bf0fd6" alt="drawing" width="800"/>
 
 
