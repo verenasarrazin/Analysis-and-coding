@@ -19,7 +19,7 @@ The structure of the database is visualised in the following EER diagram:
 
 I have created a figure in R to visualise on a world map how many documents have been published per country. The colour coding shows for each country the number of published documents per 1,000 inhabitants. The code can be found here:
 
-- [World map figure script (R)]()
+- <a href="https://verenasarrazin.github.io/Analysis-and-coding/Worldmap.html" title="World map figure (R)">World map figure (R)</a>
 
 
 <img src="https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/f3ca5c51-f58d-4778-9324-d5f1d3bf0fd6" alt="drawing" width="800"/>
