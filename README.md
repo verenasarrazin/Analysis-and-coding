@@ -31,16 +31,14 @@ Below, I am sharing scripts I have created for research projects during my DPhil
 
 
 
-## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Python/README.md" title="4. R2Python cheatsheet (R & Python)">4. R2Python cheatsheet (R & Python)</a>
-
-<img width="920" alt="image" src="https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/d0a364e8-9b71-40ef-b133-e949e171cee8">
-
-<br>
-
-## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/WineQualityDataset/README.md" title="5. Using Machine Learning to Predict Wine Quality">5. Using Machine Learning to Predict Wine Quality</a>
+## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/WineQualityDataset/README.md" title="4. Using Machine Learning to Predict Wine Quality">4. Using Machine Learning to Predict Wine Quality</a>
 
 <img width="1330" alt="Screenshot 2024-09-22 at 18 34 14" src="https://github.com/user-attachments/assets/d8b07220-87c2-495f-a9d7-87364c6bc068">
 
 <br>
 
+## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/HiringDecisionsDataset/README.md" title="5. Predicting Hiring Decisions">5. Predicting Hiring Decisions</a>
 
+<img width="948" alt="Screenshot 2024-09-22 at 18 48 12" src="https://github.com/user-attachments/assets/b98633c6-c518-4117-bdac-f3699f413b90">
+
+<br> 
