@@ -37,3 +37,10 @@ Below, I am sharing scripts I have created for research projects during my DPhil
 
 <br>
 
+## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/WineQualityDataset/README.md" title="5. Using Machine Learning to Predict Wine Quality">5. Using Machine Learning to Predict Wine Quality</a>
+
+<img width="1330" alt="Screenshot 2024-09-22 at 18 34 14" src="https://github.com/user-attachments/assets/d8b07220-87c2-495f-a9d7-87364c6bc068">
+
+<br>
+
+
