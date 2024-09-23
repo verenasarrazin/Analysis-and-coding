@@ -2,7 +2,7 @@
 
 I have recently completed a [Code First Girls](https://codefirstgirls.com/) course on SQL to extend my programming knowledge. As project work for the course, I have created a database using the [Journal Ranking Dataset](https://www.kaggle.com/datasets/xabirhasan/journal-ranking-dataset) from kaggle.com. The dataset contains information about hundreds of journals from different research areas, including number of published documents, number of citations, quality indices, country, etc. I wrote the following script to create the database:
 
-- <a href="https://verenasarrazin.github.io/Analysis-and-coding/Project_journal_ranking.html" title="Journal Ranking Database script (SQL)">Journal Ranking Database script (SQL)</a>
+- [Journal Ranking Database script (SQL)](https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Journal%20ranking%20database/Project_journal_ranking.sql)
 
 <br>
 
