@@ -7,7 +7,7 @@ depressive symptoms. Normalising these deficits in reward and punishemnt learnin
 
 ## Computational Modelling
 
-In this study, participants performed a reward and punishment learning task. The analysis of this tasks requires fitting refinforcementlearning models to participants' trial-by-trial choices. I used two approaches:
+In this study, participants performed a reward and punishment learning task. The analysis of this task requires fitting refinforcement learning models to participants' trial-by-trial choices. I used two approaches:
 
 #### Fitting a reinforcement learning model using grid approximation:
 - [Function that performs model fitting (R)](https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Targeting%20negative%20cognitive%20biases%20using%20brain%20stimulation%20(R%20%26%20STAN)/fit_model1_block_wise.R)
@@ -25,7 +25,7 @@ The parameter estimates derived from the computational models were analysed in r
 
 
 ## Publication
-The project has been published as [preprint on MedRxiv](https://www.medrxiv.org/content/10.1101/2023.04.24.23289064v1). I am very grateful for the opportunity to give a talk on this project at the Conference on Cognitive and Computational Neuroscience (CCN) 2023 in Oxford ([watch the recording on Youtube here](https://www.youtube.com/live/nxTSMQFx-HM?feature=shared&t=7521)). I have also given poster presentations on this project. 
+The project has been published as [preprint on MedRxiv](https://www.medrxiv.org/content/10.1101/2023.04.24.23289064v1). I am very grateful that I had the opportunity to give a talk on this project at the Conference on Cognitive and Computational Neuroscience (CCN) 2023 in Oxford ([watch the recording on Youtube here](https://www.youtube.com/live/nxTSMQFx-HM?feature=shared&t=7521)). I have also given various poster presentations on this project. 
 
 
 ![image](https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/ad7414c0-398e-41e7-bc02-13ce2ba7bd9d)
