@@ -1,6 +1,6 @@
 # Journal Ranking Database
 
-I have recently completed a [Code First Girls](https://codefirstgirls.com/) course on SQL to extend my programming knowledge. As project work for the course, I have created a database using the [Journal Ranking Dataset](https://www.kaggle.com/datasets/xabirhasan/journal-ranking-dataset) from kaggle.com. The dataset contains information about hundreds of journals from different research areas, including number of published documents, number of citations, quality indices, country, etc. I wrote the following script to create the database:
+Last year, I completed a [Code First Girls](https://codefirstgirls.com/) course on SQL to extend my programming knowledge. Inspired by my search for a suitable journal to publish my PhD work, I have created a database using the [Journal Ranking Dataset](https://www.kaggle.com/datasets/xabirhasan/journal-ranking-dataset) from kaggle.com. The dataset contains information about hundreds of journals from different research areas, including number of published documents, number of citations, quality indices, country, etc. I wrote the following script to create the database:
 
 - [Journal Ranking Database script (SQL)](https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Journal%20ranking%20database/Project_journal_ranking.sql)
 
