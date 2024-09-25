@@ -94,7 +94,7 @@ Below, I am showcasing examples of analysis projects I conducted as part of my r
     </tr>
     </tr>
       <td>6. Journal Ranking Database</td>
-      <td></td>
+      <td>✅</td>
       <td></td>
       <td>✅</td>
       <td></td>
