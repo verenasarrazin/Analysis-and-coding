@@ -1,4 +1,4 @@
-# Verena Sarrazin - Analysis and Coding
+# Verena Sarrazin - Data Science Portfolio
 
 <br>
 
