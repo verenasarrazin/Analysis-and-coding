@@ -45,6 +45,7 @@ Below, I am showcasing examples of analysis projects I conducted as part of my r
       <td></td>
       <td></td>
     </tr>
+    <tr>
       <td>2. Cognitive Phenotyping</td>
       <td>✅</td>
       <td>✅</td>
@@ -56,7 +57,7 @@ Below, I am showcasing examples of analysis projects I conducted as part of my r
       <td>✅</td>
       <td></td>
     </tr>
-    </tr>
+    <tr>
       <td>3. Predicting Hiring Descisions</td>
       <td></td>
       <td>✅</td>
@@ -68,7 +69,7 @@ Below, I am showcasing examples of analysis projects I conducted as part of my r
       <td></td>
       <td></td>
     </tr>
-    </tr>
+    <tr>
       <td>4. Predicting Wine Quality</td>
       <td></td>
       <td>✅</td>
@@ -80,7 +81,7 @@ Below, I am showcasing examples of analysis projects I conducted as part of my r
       <td></td>
       <td>✅</td>
     </tr>
-    </tr>
+    <tr>
       <td>5. Covid Time Series Analysis</td>
       <td></td>
       <td>✅</td>
@@ -92,7 +93,7 @@ Below, I am showcasing examples of analysis projects I conducted as part of my r
       <td></td>
       <td></td>
     </tr>
-    </tr>
+    <tr>
       <td>6. Journal Ranking Database</td>
       <td>✅</td>
       <td></td>
