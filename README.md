@@ -123,11 +123,12 @@ Below, I am sharing scripts I have created for research projects during my DPhil
 
 # Data Science Projects
 
-## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Journal%20ranking%20database/Overview.md" title="3. Journal Ranking Database (SQL)">3. Journal Ranking Database (SQL)</a>
 
-![image](https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/953441b0-b9c0-497e-a44b-2801ec630ae4)
+## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/HiringDecisionsDataset/README.md" title="3. Classification - Predicting Hiring Decisions">3. Classification - Predicting Hiring Decisions</a>
 
+<img width="948" alt="Screenshot 2024-09-22 at 18 48 12" src="https://github.com/user-attachments/assets/b98633c6-c518-4117-bdac-f3699f413b90">
 
+<br>
 
 ## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/WineQualityDataset/README.md" title="4. Regression - Predicting Wine Quality">4. Regression - Predicting Wine Quality</a>
 
@@ -135,16 +136,23 @@ Below, I am sharing scripts I have created for research projects during my DPhil
 
 <br>
 
-## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/HiringDecisionsDataset/README.md" title="5. Classification - Predicting Hiring Decisions">5. Classification - Predicting Hiring Decisions</a>
-
-<img width="948" alt="Screenshot 2024-09-22 at 18 48 12" src="https://github.com/user-attachments/assets/b98633c6-c518-4117-bdac-f3699f413b90">
-
-<br> 
-
-## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/CovidDataset/README.md" title="6. Time Series Analysis - Impact of Covid Restrictions and Travelling">6. Time Series Analysis - Impact of Covid Restrictions and Travelling</a>
+## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/CovidDataset/README.md" title="5. Time Series Analysis - Impact of Covid Restrictions and Travelling">5. Time Series Analysis - Impact of Covid Restrictions and Travelling</a>
 
 <img width="919" alt="Screenshot 2024-09-22 at 18 58 42" src="https://github.com/user-attachments/assets/95d095c4-f15d-48a6-a9d8-9de4d142aff4">
 
 <br>
+
+
+## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Journal%20ranking%20database/Overview.md" title="6. Journal Ranking Database (SQL)">6. Journal Ranking Database (SQL)</a>
+
+![image](https://github.com/verenasarrazin/Analysis-and-coding/assets/73107031/953441b0-b9c0-497e-a44b-2801ec630ae4)
+
+<br> 
+
+
+
+
+
+
 
 
