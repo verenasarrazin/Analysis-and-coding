@@ -1,8 +1,6 @@
 
 Below, I am sharing scripts I have created for research projects during my DPhil and post-doc, as well as scripts for data science projects I have been working on to extend my coding skills.
 
-| Project | R | Python | SQL | Statistical analysis | Bayesian techniques | Supervised ML | Unsupervised ML | Cross-validation |
-|---------|-|-|-|-|-|-|-|-|
 
 <table>
   <thead>
@@ -16,7 +14,7 @@ Below, I am sharing scripts I have created for research projects during my DPhil
   </thead>
   <tbody>
     <tr>
-      <td>Project</td>
+      <td><b>Project</b></td>
       <td><b>R</b></td>
       <td><b>Python</b></td>
       <td><b>SQL</b></td>
@@ -48,6 +46,54 @@ Below, I am sharing scripts I have created for research projects during my DPhil
       <td></td>
       <td></td>
       <td>✅</td>
+      <td></td>
+    </tr>
+    </tr>
+      <td>3. Predicting Hiring Descisions</td>
+      <td></td>
+      <td>✅</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>✅</td>
+      <td></td>
+      <td></td>
+    </tr>
+    </tr>
+      <td>4. Predicting Wine Quality</td>
+      <td></td>
+      <td>✅</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>✅</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    </tr>
+      <td>5. Covid Time Series Analysis</td>
+      <td></td>
+      <td>✅</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>✅</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    </tr>
+      <td>6. Journal Ranking Database</td>
+      <td></td>
+      <td></td>
+      <td>✅</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
       <td></td>
     </tr>
   </tbody>
