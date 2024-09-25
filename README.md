@@ -1,6 +1,58 @@
 
 Below, I am sharing scripts I have created for research projects during my DPhil and post-doc, as well as scripts for data science projects I have been working on to extend my coding skills.
 
+| Project | R | Python | SQL | Statistical analysis | Bayesian techniques | Supervised ML | Unsupervised ML | Cross-validation |
+|---------|-|-|-|-|-|-|-|-|
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="1"></th>
+      <th colspan="3">Language</th>
+      <th colspan="2">Statistics</th>
+      <th colspan="2">Supervised ML</th>
+      <th colspan="2">Unsupervised ML</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Project</td>
+      <td><b>R</b></td>
+      <td><b>Python</b></td>
+      <td><b>SQL</b></td>
+      <td><b>Frequentist</b></td>
+      <td><b>Bayesian</b></td>
+      <td><b>Regression</b></td>
+      <td><b>Classification</b></td>
+      <td><b>Factor Analysis</b></td>
+      <td><b>Principal Component Analysis</b></td>
+    </tr>
+    <tr>
+      <td>1. Targeting Cognitive Biases</td>
+      <td>✅</td>
+      <td></td>
+      <td></td>
+      <td>✅</td>
+      <td>✅</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+      <td>2. Cognitive Phenotyping</td>
+      <td>✅</td>
+      <td>✅</td>
+      <td></td>
+      <td>✅</td>
+      <td>✅</td>
+      <td></td>
+      <td></td>
+      <td>✅</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
 # Research Projects
 
 ## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/Targeting%20negative%20cognitive%20biases%20using%20brain%20stimulation%20(R%20%26%20STAN)/Overview.md" title="1. Targeting Negative Cognitive Biases Using Brain Stimulation (R & STAN)">1. Targeting Negative Cognitive Biases Using Brain Stimulation (R & STAN)</a>
