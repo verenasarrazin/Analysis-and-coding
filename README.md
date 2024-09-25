@@ -5,7 +5,7 @@
 I am Post-Doctoral Researcher at the University of Oxford with a focus on data analysis. Throughout my career as researcher in neuroscience and psychiatry I have developed expertise in various data analysis techniques, and I have recently completed formal training in Data Science and Machine Learning ([Code First Girls Degree and +Masters](https://codefirstgirls.com/courses/cfgdegree/)).
 
 
-Below, I am showcasing examples of analysis projects I conducted as part of my research and data science training. The table below summarises which coding languages and methods I have used in each project. 
+Below, I am showcasing some examples of analysis projects I have conducted as part of my research and data science training. The table below summarises which coding languages and methods I have used in each project. 
 
 <br>
 
