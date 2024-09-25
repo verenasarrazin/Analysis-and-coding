@@ -135,7 +135,7 @@ Below, I am showcasing examples of analysis projects I conducted as part of my r
 # Data Science Projects
 
 
-## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/HiringDecisionsDataset/README.md" title="3. Classification - Predicting Hiring Decisions">3. Classification - Predicting Hiring Decisions</a>
+## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/HiringDecisionsDataset/README.md" title="3. Classification - Predicting Hiring Decisions (Python)">3. Classification - Predicting Hiring Decisions (Python)</a>
 
 - Pre-processing
 - Exploratory Data Analysis
@@ -146,7 +146,7 @@ Below, I am showcasing examples of analysis projects I conducted as part of my r
 
 <br>
 
-## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/WineQualityDataset/README.md" title="4. Regression - Predicting Wine Quality">4. Regression - Predicting Wine Quality</a>
+## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/WineQualityDataset/README.md" title="4. Regression - Predicting Wine Quality (Python)">4. Regression - Predicting Wine Quality (Python)</a>
 
 - Pre-processing
 - Exploratory Data Analysis
@@ -158,7 +158,7 @@ Below, I am showcasing examples of analysis projects I conducted as part of my r
 
 <br>
 
-## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/CovidDataset/README.md" title="5. Time Series Analysis - Impact of Covid Restrictions and Travelling">5. Time Series Analysis - Impact of Covid Restrictions and Travelling</a>
+## <a href="https://github.com/verenasarrazin/Analysis-and-coding/blob/main/CovidDataset/README.md" title="5. Time Series Analysis - Impact of Covid Restrictions and Travelling (Python)">5. Time Series Analysis - Impact of Covid Restrictions and Travelling (Python)</a>
 
 - Pre-processing
 - Exploratory Data Analysis
