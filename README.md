@@ -142,7 +142,7 @@ Below, I am showcasing some examples of analysis projects I have conducted as pa
 - Classification algorithms
 - Cross-validation
 
-<img width="948" alt="Screenshot 2024-09-22 at 18 48 12" src="https://github.com/user-attachments/assets/b98633c6-c518-4117-bdac-f3699f413b90">
+<img width="1356" alt="image" src="https://github.com/user-attachments/assets/a81c6d63-fd79-45be-9768-38e7e16edf30">
 
 <br>
 
